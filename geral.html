@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Senhas</title>
+  <link rel="shortcut icon" type="image/icon" href="./img/logoicon.ico"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #icon{
+      width: 40px ;
+      height:35px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><img src="./img/hospital.png" id="icon">Clinica Nabis</h1>
+    <div class="logo">
+      <img src="./img/logohospital.png" alt="Logo" width="200px" height="200">
+    </div>
+    <h3>Sistema de Senhas</h3>
+  
+    
+    <div class="container2">
+        <div id="clock">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+    </div>
+    
+    <!-- Campo de entrada para o nome do paciente -->
+    <div class="entrada-nome">
+      <h1><label for="nome-paciente">Nome do Paciente:</label></h1>
+      <input type="text" id="nome-paciente" placeholder="Digite o nome do paciente">
+    </div>
+    <div class="controles">
+        <button onclick="gerarSenha('emergencia')">SENHA EMERGENCIA</button>
+        <button onclick="gerarSenha('preferencial')">SENHA PREFERENCIAL</button>
+        <button onclick="gerarSenha('normal')">SENHA NORMAL</button>
+    </div>
+    <div class="senha-atual">
+      <br>
+      <h2>Senha Atual</h2>
+      <br>
+      <div id="senha-atual-display">Nenhuma senha chamada</div>
+      <br>
+    </div>
+
+    <div class="senhas-chamadas">
+      <br>
+      <h2>Últimas Senhas Chamadas</h2>
+      <br>
+      <ul id="ultimas-senhas"></ul>
+    </div>
+
+    <div class="fila-senhas">
+      <br>
+      <h2>Senhas na Fila</h2>
+      <br>
+      <ul id="senhas-na-fila"></ul>
+    </div>  
+
+    <div class="controles">
+      <button onclick="chamarProximaSenha()">Chamar Próxima Senha</button>
+      <button onclick="limpar()">Limpar historico</button>
+      <a href="./index.html"><button onclick=>Inicio</button></a>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

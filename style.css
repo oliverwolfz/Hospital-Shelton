@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+
+  body {
+    font-family:Changa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('./img/fundo.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+  }
+
+  .container {
+    background-color: rgb(212, 229, 243);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(11, 11, 11, 0.1);
+    height: 100%;
+    width: 55%;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom right, #fafafa, #f5f5f5);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    animation: myAnimation 1s ease-in-out;
+  }
+
+  @keyframes myAnimation {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  .container2 {
+    padding: 0px;
+  }
+
+  .controles, .entrada-nome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  h1, h2, h3{
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #ec0157;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #01478e;
+  }
+  
+  #senha-atual-display {
+    font-size: 24px;
+    font-family:cursive;
+    margin: 0;
+    text-align: center;
+  }
+
+  #clock {
+    font-size: 3em;
+    color: #01478e;
+    font-weight: bold;
+    text-align: center;
+}
+
+  #clock:hover {
+    color: #ff0062;
+}
+
+  .logotipo {
+  text-align: center;
+}
+
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  .logotipo img {
+  transition: all 0.5s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+  .logotipo img:hover {
+  animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+  transform: scale(1.5) rotate(45deg);
+}
+
+  .logo {
+  text-align: center;
+}
+
+  @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  .logo img {
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+  .logo img:hover {
+  transform: rotateY(180deg);
+} 
+
+  .voltar {
+    background-color: #0466f8;
+    position:fixed;
+}
+
+  .voltar:hover {
+    background-color:  #ff0857;
+}
+/*::-webkit-input-placeholder{
+  color:#ff0857;
+  border-radius: 20px;
+  border: 0px solid;
+  box-shadow: 4px 4px 0px white;
+  line-height: 100px;
+}*/
+
+input{
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ff0857;
+  font-size: 15px;
+  box-shadow: 4px 4px 0px black;
+}

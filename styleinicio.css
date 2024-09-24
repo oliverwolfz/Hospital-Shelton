@@ -1,0 +1,98 @@
+body {
+    font-family:Changa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('./img/fundo4.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+  }
+
+  .containerinicio {
+    background-color: aliceblue;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #faf5f8, #f9fcff);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+
+  .container2 {
+    padding: 0px;
+  }
+
+  .controles, .entrada-nome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  h1, h2{
+    text-align: center;
+  }
+
+  .logotipo {
+  text-align: center;
+}
+
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  .logotipo img {
+  transition: all 0.5s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+  .logotipo img:hover {
+  animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+  transform: scale(1.5) rotate(45deg);
+}
+
+.card {
+  width: 150px;
+  background: linear-gradient(to bottom right, #fef2f7, #f6faff);
+  border: 1px solid #ffffff;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-hidden {
+  overflow: hidden;
+  height: 0;
+}
+
+.card:hover .content-hidden {
+  height: auto;
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+.card:hover .content-hidden {
+  animation: expand 0.5s ease-in-out;
+}
